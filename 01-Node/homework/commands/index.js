@@ -70,7 +70,7 @@ module.exports = {
   sort: (input) => {
     fs.readFile(path.join(__dirname, "../") + input, "utf8", (err, data) => {
       if (err) throw err;
-      let arr = data.toLowerCase().split(/\r?\n/);
+      let arr = data.split(/\r?\n/);
       let output = arr
         .sort((a, b) => {
           return a.localeCompare(b);
